@@ -5,7 +5,7 @@ import logo from'./images/logo.png'
 export default class Login extends Component{
     handleSubmit = (event)=> {
         event.preventDefault()
-        alert('提交了')
+        alert('提交')
     }
     render(){
         return(
