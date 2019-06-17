@@ -1,3 +1,4 @@
+/*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
 p,
@@ -75,10 +76,11 @@ th {
   text-align: left;
 }
 html,body{
-      width: 100%;
-      height: 100%;
+  width: 100%;
+  height: 100%;
+
 }
 #root{
   width: 100%;
-        height: 100%;
+  height: 100%;
 }
