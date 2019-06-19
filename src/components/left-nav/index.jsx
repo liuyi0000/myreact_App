@@ -1,13 +1,10 @@
-/* 
-admin的左侧导航组件
-*/
-
 import React, { Component } from 'react'
-import './index.less'
-import {Link,withRouter} from 'react-router-dom'
+import {Link, withRouter } from 'react-router-dom'
+import { Menu, Icon } from 'antd'
+
+import menuList from "../../config/menuConfig"   // ===> [<Item/>, <SubMenu/>>]
 import logo from '../../assets/images/logo.png'
-import {Menu,Icon} from 'antd'
-import menuList from "../../config/menuConfig"
+import './index.less'
 
 const { SubMenu, Item } = Menu
 
@@ -60,9 +57,6 @@ class LeftNav extends Component {
           </SubMenu>
         )
       }
-
-     
-
     })
   }
 
@@ -73,6 +67,14 @@ class LeftNav extends Component {
   getMenuNodes2 = (menuList) => {
 
 
+    /* const array1 = [1, 2, 3, 4, 5];
+        const list = menuList.reduce((pre, item)=> {
+          if (!item.children) {
+            pre.push(item)
+          }
+          return pre
+        }, [])
+    */
     // 得到当前请求的路径
     const path = this.props.location.pathname
 
@@ -144,7 +146,35 @@ class LeftNav extends Component {
             this.menuNodes
           }
 
-
+          {/* <Item key="/home">
+            <Link to="/home">
+              <Icon type="home" />
+              <span>首页</span>
+            </Link>
+          </Item>
+          
+          <SubMenu
+            key="/products"
+            title={
+              <span>
+                <Icon type="mail" />
+                <span>商品</span>
+              </span>
+            }
+          >
+            <Item key="/category">
+              <Link to="/category">
+                <Icon type="home" />
+                <span>分类管理</span>
+              </Link>
+            </Item>
+            <Item key="/product">
+              <Link to="/product">
+                <Icon type="home" />
+                <span>商品管理</span>
+              </Link>
+            </Item>
+          </SubMenu> */}
           
         </Menu>
       </div>
